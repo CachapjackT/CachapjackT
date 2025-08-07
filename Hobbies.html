@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hobbies - Jack Tomilas Cachap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      background: url('https://img.freepik.com/premium-photo/night-dark-grunge-background-with-light_120819-269.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.7);
+      min-height: 100vh;
+      padding: 50px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .header h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+
+    .header p {
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background-size: cover ;
+      background-position: center;
+      border-radius: 15px;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 500px;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+      border-radius: 15px;
+    }
+
+    .card-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #eee;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 32px;
+      }
+    }
+
+    /* Ensure images inside card don't overflow and are nicely displayed */
+    .card img {
+      width: 100%;
+      max-width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+      margin: 10px auto;
+    }
+
+   .card-image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.card img {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+
+}
+
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="header">
+      <h1>My Hobbies</h1>
+      <p>Where I find thrill and fun outside school and training.</p>
+    </div>
+
+    <div class="portfolio">
+      <!-- Motorcycle Card -->
+      <div class="card" style="background-image: url('hobbies/ride.jpg');">
+        <div class="card-content">
+          <h3>Motorcycle Riding</h3>
+          <p>Riding Hera (my Honda Supra GTR 150)makes me really happy. When I ride, I feel free and relaxed.
+ I love the sound of the engine and the feeling of the wind on my face. It helps me forget my problems 
+and just enjoy the moment. Riding is't just something I do for fun, it's something that makes me feel alive and peaceful.</p>
+        </div>
+      </div>
+
+      <!-- Multiple images Card -->
+      <div class="card" style="background: none; background-color: rgba(0,0,0,0.6);">
+        <div class="card-image-container">
+          
+          <img src="hobbies/ride 2.jpg" alt="Motorcycle Image 2">
+          <img src="hobbies/ride 3.jpg" alt="Motorcycle Image 3">
+          <img src="hobbies/ride 4.jpg" alt="Motorcycle Image 4">
+          <img src="hobbies/ride 5.jpg" alt="Motorcycle Image 5">
+          <img src="hobbies/ride 6.jpg" alt="Motorcycle Image 6">
+        </div>
+        <div class="card-content">
+          <h3>My Bike and my adventures</h3>
+          <p>Here's a picture of my bike, which I take on thrilling rides every weekend.</p>
+        </div>
+      </div>
+
+   <!-- Mobile Legends Card -->
+<div class="card" style="
+  background-image: url('https://a-static.besthdwallpaper.com/zilong-mobile-legends-ml-wallpaper-3554x1999-67682_53.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 400px;
+  background-color: rgba(0,0,0,0.6); /* fallback if image doesn’t fill area */
+">
+  <div class="card-content">
+    <h3>Mobile Legends</h3>
+    <p>Mobile Legends has always been a way for me to unwind and enjoy a competitive challenge, but what makes it even more special is how it brings
+      me closer to my friends. I've got friends I haven't seen in ages, and the game gives us the perfect excuse to reconnect. Whether we're teaming up for 
+      ranked matches or just playing casually, it's like picking up where we left off, laughing at old inside jokes, and strategizing together as if no time has passed.
+      It's more than just a game, it's a way to stay connected, even when life gets busy, and I love how it makes our friendship stronger, even from a distance.
+    </p>
+  </div>
+</div>
+
+
+
+      <!-- Back to Main Page Card -->
+     <a href="index.html">
+  <div class="card" style="
+    background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413');
+    min-height: 100px;
+  ">
+
+          <div class="card-content">
+            <h3>? Back to Main</h3>
+            <p>Return to my personal portfolio homepage.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

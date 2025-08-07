@@ -44,7 +44,7 @@
     }
 
     .card {
-      background-size: cover;
+      background-size: cover ;
       background-position: center;
       border-radius: 15px;
       padding: 20px;
@@ -53,6 +53,7 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+      min-height: 500px;
     }
 
     .card::before {
@@ -93,12 +94,35 @@
       }
     }
 
-    /* Ensure the image inserted doesn't overflow and is fully visible */
+    /* Ensure images inside card don't overflow and are nicely displayed */
     .card img {
       width: 100%;
-      height: auto;
+      max-width: 300px;
+      height: 200px;
       object-fit: cover;
-      border-radius: 15px;
+      border-radius: 8px;
+      display: block;
+      margin: 10px auto;
+    }
+
+   .card-image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.card img {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+
+}
+
     }
   </style>
 </head>
@@ -111,38 +135,61 @@
 
     <div class="portfolio">
       <!-- Motorcycle Card -->
-      <div class="card" style="background-image: url('https://motorbike.gr/wp-content/uploads/2019/04/0004.Honda-Supra-GTR-150-1024x683.jpg');">
+      <div class="card" style="background-image: url('hobbies/ride.jpg');">
         <div class="card-content">
           <h3>Motorcycle Riding</h3>
-          <p>Riding my Honda Supra GTR 150 helps me unwind and enjoy the open road. It's more than a hobby, it's freedom.</p>
+          <p>Riding Hera (my Honda Supra GTR 150)makes me really happy. When I ride, I feel free and relaxed.
+ I love the sound of the engine and the feeling of the wind on my face. It helps me forget my problems 
+and just enjoy the moment. Riding is't just something I do for fun, it's something that makes me feel alive and peaceful.</p>
         </div>
       </div>
 
-      <!-- Inserted Image wrapped inside a card (fixing overflow and visibility) -->
-      <div class="card">
-        <img src="IMG20250423154400.jpg" alt="Motorcycle Image">
+      <!-- Multiple images Card -->
+      <div class="card" style="background: none; background-color: rgba(0,0,0,0.6);">
+        <div class="card-image-container">
+          
+          <img src="hobbies/ride 2.jpg" alt="Motorcycle Image 2">
+          <img src="hobbies/ride 3.jpg" alt="Motorcycle Image 3">
+          <img src="hobbies/ride 4.jpg" alt="Motorcycle Image 4">
+          <img src="hobbies/ride 5.jpg" alt="Motorcycle Image 5">
+          <img src="hobbies/ride 6.jpg" alt="Motorcycle Image 6">
+        </div>
         <div class="card-content">
-          <h3>My Bike</h3>
+          <h3>My Bike and my adventures</h3>
           <p>Here's a picture of my bike, which I take on thrilling rides every weekend.</p>
         </div>
       </div>
 
-      <!-- Mobile Legends Card -->
-      <div class="card" style="background-image: url('https://a-static.besthdwallpaper.com/zilong-mobile-legends-ml-wallpaper-3554x1999-67682_53.jpg');">
-        <div class="card-content">
-          <h3>Mobile Legends</h3>
-          <p>Mobile Legends has always been a way for me to unwind and enjoy a competitive challenge, but what makes it even more special is how it brings
- me closer to my friends. I've got friends I haven't seen in ages, and the game gives us the perfect excuse to reconnect. Whether we�re teaming up for 
-ranked matches or just playing casually, it's like picking up where we left off, laughing at old inside jokes, and strategizing together as if no time has passed.
- It's more than just a game, it's a way to stay connected, even when life gets busy, and I love how it makes our friendship stronger, even from a distance.</p>
-        </div>
-      </div>
+   <!-- Mobile Legends Card -->
+<div class="card" style="
+  background-image: url('https://a-static.besthdwallpaper.com/zilong-mobile-legends-ml-wallpaper-3554x1999-67682_53.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 400px;
+  background-color: rgba(0,0,0,0.6); /* fallback if image doesn’t fill area */
+">
+  <div class="card-content">
+    <h3>Mobile Legends</h3>
+    <p>Mobile Legends has always been a way for me to unwind and enjoy a competitive challenge, but what makes it even more special is how it brings
+      me closer to my friends. I've got friends I haven't seen in ages, and the game gives us the perfect excuse to reconnect. Whether we're teaming up for 
+      ranked matches or just playing casually, it's like picking up where we left off, laughing at old inside jokes, and strategizing together as if no time has passed.
+      It's more than just a game, it's a way to stay connected, even when life gets busy, and I love how it makes our friendship stronger, even from a distance.
+    </p>
+  </div>
+</div>
+
+
 
       <!-- Back to Main Page Card -->
-      <a href="index.html">
-        <div class="card" style="background-color: #444;">
+     <a href="index.html">
+  <div class="card" style="
+    background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413');
+    min-height: 100px;
+  ">
+
           <div class="card-content">
-            <h3>? Back to Main</h3>
+            <h3>← Back to Main</h3>
             <p>Return to my personal portfolio homepage.</p>
           </div>
         </div>
@@ -151,3 +198,4 @@ ranked matches or just playing casually, it's like picking up where we left off,
   </div>
 </body>
 </html>
+

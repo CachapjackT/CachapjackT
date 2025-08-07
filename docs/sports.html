@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Sports</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      background: url('https://up.yimg.com/ib/th/id/OIP.PMUuTXRh8ViXjl5GWvldsQHaEK?pid=Api&rs=1&c=1&qlt=95&w=199&h=111') no-repeat center fixed;
+      background-size: cover;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.5);
+      min-height: 100vh;
+      padding: 50px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .header h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+
+    .header p {
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    .sports-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background-size: cover;
+      background-position: center;
+      border-radius: 15px;
+      padding: 20px;
+      height: auto;
+      position: relative;
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      border-radius: 15px;
+    }
+
+    .card-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .card p {
+      font-size: 14px;
+      margin: 10px 0;
+      color: #eee;
+    }
+
+    .card a {
+      color: #ffcc00;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    a.card-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+      justify-content: center;
+    }
+
+    .image-gallery img {
+      width: 300px;      /* fixed width */
+      height: 300px;     /* fixed height */
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .image-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="header">
+      <h1>My Sports</h1>
+      <p>Discover the sports that shaped my discipline and drive.</p>
+    </div>
+
+    <div class="sports-section">
+
+      <!-- Karate Bubble Container -->
+      <div class="bubble-container">
+        <h2>Karate</h2>
+        <div class="card" style="background-image: url('sports/karate.jpg');">
+          <div class="card-content">
+            <p>
+              I first got into karate when I was in grade 4. It wasn't something I thought about at first, but my father encouraged me to give it a try.
+              He knew I dreamed of becoming a police officer one day and believed that learning self-defense and discipline early on would help me in the future.
+              At first, I was just curious, but over time, I began to enjoy the training, the challenge, and the structure it brought into my life.
+              That's when I realized sports weren't just activities, they were tools to build character, strength, and focus.
+              Since then, karate has become more than just a skill. It's a part of who I am.
+            </p>
+            <p><strong>Achievements:</strong></p>
+            <ul>
+              <li><strong>2016 November 7:</strong> Karate Do Tournament (YMCA Baguio)
+                <ul>
+                  <li>Gold Medal - Kata Forms</li>
+                  <li>Silver Medal - Sparring</li>
+                </ul>
+              </li>
+              <li><strong>2017 March 5:</strong> Panagbenga Karate Do Championship (Baguio Convention Center)
+                <ul>
+                  <li>Bronze Medal - Kata Forms</li>
+                  <li>Bronze Medal - Sparring</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    
+
+      <!-- Wushu Taolu Bubble Container -->
+      <div class="bubble-container">
+        <h2>Wushu Taolu</h2>
+        <div class="card" style="background-image: url('sports/me.jpg');">
+          <div class="card-content">
+            <p>
+              My journey in Wushu Taolu began during my first year at the University of the Cordilleras. 
+              It started with a simple invitation from a close friend during the school's sports recruitment.
+              She didn't want to go alone and mentioned that there was a chance of earning a full scholarship if we joined.
+              I was curious, so I talked it over with my parents, and they gave me the go-ahead to attend the training.
+              On the day of practice, I showed up expecting her to be there, but she wasn't. When I messaged her, she said she decided 
+              to back out because she couldn't manage both academics and training. I was a bit disappointed, but I chose to stay.
+              As the sessions went on, I began to realize that Wushu Taolu wasn't just something new, it felt familiar.
+              Its movements reminded me of karate, which made it easier to connect with.
+              Eventually, I started joining parades, performances, and competitions. What began as a favor to a friend turned into something 
+              I truly enjoyed and found potential in. It challenged me, shaped me, and became another part of my growing journey in sports.
+            </p>
+            <p><strong>Achievements:</strong></p>
+            <ul>
+              <li><strong>2024 November 17:</strong> 35th Season of Baguio Benguet Educational Athletic League (Jurado Hall, PMA)
+                <ul>
+                  <li>Gold Medal - Changquan Category</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+     
+ <!-- Gallery Bubble Container -->
+      <div class="bubble-container">
+        <h2>Photo Highlights</h2>
+        <div class="card" style="background-image: none; background-color: rgba(255, 255, 255, 0.1);">
+          <div class="card-content">
+            
+            <div class="image-gallery">
+            
+              <img src="sports/me2.jpg" alt="Event 2" />
+              <img src="sports/me3.jpg" alt="Event 3" />
+              <img src="sports/me4.jpg" alt="Event 4" />
+              <img src="sports/me5.jpg" alt="Event 45" />
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- This closes the bubble-container -->
+
+      <!-- Back to Main -->
+      <a class="card-link" href="index.html">
+        <div class="card" style="background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413');">
+          <div class="card-content">
+            <h3>? Back to Main</h3>
+            <p>Return to the main portfolio page.</p>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  
